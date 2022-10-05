@@ -250,9 +250,19 @@
             padding: 0;
           }
         }
+
       }
       .three {
-        display: none;
+        .personal,
+        .education,
+        .socials,
+        .guarantor,
+        .last {
+            .bottom{
+                // display: block;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
       }
     }
   }
