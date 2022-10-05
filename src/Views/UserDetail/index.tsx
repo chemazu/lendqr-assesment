@@ -1,6 +1,10 @@
 import React from "react";
 import "./style.scss";
 import backArrow from "../../assests/img/back-arrow.svg";
+import filledStar from "../../assests/img/filled_star.svg";
+import emptyStar from "../../assests/img/empty_star.svg";
+ 
+
 import avatar from "../../assests/img/avatar.svg";
 import "./style.scss";
 
@@ -31,7 +35,11 @@ export default function UserDetail() {
             </div>
             <div className="user-tier">
               <p>User's Tier</p>
-              <div className="stars">1 1 1 1</div>
+              <div className="stars">
+                <img src={filledStar} alt="star" />{" "}
+                <img src={emptyStar} alt="star" />{" "}
+                <img src={emptyStar} alt="star" />
+              </div>
             </div>
             <div className="user-account">
               <h3>₦ 200,000.00</h3>

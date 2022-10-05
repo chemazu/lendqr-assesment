@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="nav">
-        <Header/>
+        {/* <Header/> */}
       </div>
       <div className="main">
         <UserDetail />
