@@ -1,10 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family==Work+Sans:wght@400;500&display=swap");
 .user-detail {
   display: flex;
-  background-color: red;
   width: 100%;
   .left {
     width: 17.5%;
+    padding: 25px 3.5%;
+    div {
+      .top {
+        h4 {
+          font-family: "Work Sans" sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+          /* identical to box height */
+          text-transform: uppercase;
+          color: #545f7d;
+        }
+      }
+    }
+    .left-item {
+      display: flex;
+      // justify-content: space-between;
+      // width: 90%;
+      padding: 5% 0;
+      margin: 5% 0;
+      h3,
+      h4,
+      p {
+        font-family: "Work Sans" sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height */
+        color: #213f7d;
+        padding: 0 10%;
+      }
+    }
   }
   .right {
     width: 87.5%;
@@ -44,7 +77,7 @@
           color: #213f7d;
         }
         .button-wrapper {
-          width: 30%;
+          width: 32.5%;
           display: flex;
           justify-content: space-between;
           button {
@@ -110,10 +143,10 @@
           border-right: 1px solid #545f7d33;
           border-left: 1px solid #545f7d33;
           padding: 0 5%;
-          .stars{
+          .stars {
             display: flex;
-            img{
-                width: 20%;
+            img {
+              width: 20%;
             }
           }
         }
@@ -207,7 +240,7 @@
     }
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .user-detail {
     .left {
       display: none;
@@ -234,12 +267,12 @@
           .user-account {
             margin: 10px 0;
           }
-          .user-tier{
-            .stars{
-                img{
-                    width: 10%;
-                }
+          .user-tier {
+            .stars {
+              img {
+                width: 10%;
               }
+            }
           }
         }
         .top,
@@ -250,7 +283,6 @@
             padding: 0;
           }
         }
-
       }
       .three {
         .personal,
@@ -258,10 +290,10 @@
         .socials,
         .guarantor,
         .last {
-            .bottom{
-                // display: block;
-                grid-template-columns: 1fr 1fr;
-            }
+          .bottom {
+            // display: block;
+            grid-template-columns: 1fr 1fr;
+          }
         }
       }
     }

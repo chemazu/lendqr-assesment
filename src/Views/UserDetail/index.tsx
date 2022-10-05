@@ -3,7 +3,10 @@ import "./style.scss";
 import backArrow from "../../assests/img/back-arrow.svg";
 import filledStar from "../../assests/img/filled_star.svg";
 import emptyStar from "../../assests/img/empty_star.svg";
- 
+import users from "../../assests/img/users.svg";
+import briefcase from "../../assests/img/briefcase.svg";
+import arrowDown from "../../assests/img/arrow-down.svg";
+import dash from "../../assests/img/dash.svg";
 
 import avatar from "../../assests/img/avatar.svg";
 import "./style.scss";
@@ -11,7 +14,88 @@ import "./style.scss";
 export default function UserDetail() {
   return (
     <div className="user-detail">
-      <div className="left"></div>
+      <div className="left">
+        <div className="left-item">
+          <img src={briefcase} alt="icon" />
+
+          <h3>Switch Organization</h3>
+          <img src={arrowDown} alt="icon" />
+        </div>
+        <div className="left-item">
+          <img src={dash} alt="icon" />
+          <h4>Dashboard</h4>
+        </div>
+        <div className="customers">
+          <div className="top">
+            <h4>Customers</h4>
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>
+          </div>
+        </div>
+        <div className="customers">
+          <div className="top">
+            <h4>Customers</h4>
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>{" "}
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>
+            <div className="left-item">
+              <img src={users} alt="users" />
+              <p>Users</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="right">
         <div className="one">
           <div className="top">
