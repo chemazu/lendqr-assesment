@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family==Work+Sans:wght@400;500&display=swap");
+.user-detail {
+  display: flex;
+  background-color: red;
+  width: 100%;
+
+  .left {
+    width: 17.5%;
+  }
+  .right {
+    width: 87.5%;
+    background-color: #e5e5e5;
+    padding: 15px 5%;
+    .one {
+      .top {
+        display: flex;
+        padding-top: 2%;
+        justify-content: space-between;
+        width: 12.5%;
+        p {
+          font-family: "Work Sans", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: #545f7d;
+        }
+      }
+      .bottom {
+        padding: 2.5% 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        h3 {
+          font-family: "Work Sans", sans-serif;
+
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+
+          color: #213f7d;
+        }
+        .button-wrapper {
+          width: 30%;
+          display: flex;
+          justify-content: space-between;
+          button {
+            border: 1px solid #e4033b;
+            border-radius: 8px;
+            font-size: 12px;
+            line-height: 16px;
+            padding: 7.5px 1rem;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #e4033b;
+            font-family: "Work Sans", sans-serif;
+          }
+          .sec {
+            color: #39cdcc;
+            border: 1px solid #39cdcc;
+          }
+        }
+      }
+    }
+    .two {
+      background: #ffffff;
+      border: 1px solid rgba(33, 63, 125, 0.06);
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+      padding: 15px 2.5%;
+      padding-bottom: 0;
+      margin-bottom: 5%;
+      border-radius: 4px;
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        /* identical to box height */
+
+        color: #213f7d;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        justify-content: space-between;
+        padding-bottom: 2%;
+        box-sizing: border-box;
+        img {
+          width: 6rem;
+        }
+        p {
+          padding: 0.5em 0;
+        }
+        h3 {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+          /* identical to box height */
+
+          color: #213f7d;
+        }
+        .user-tier {
+          border-right: 1px solid #545f7d33;
+          border-left: 1px solid #545f7d33;
+          padding: 0 5%;
+        }
+      }
+      .bottom {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        p {
+          padding: 5px 12.5px;
+        }
+        .active {
+          border-bottom: 2px solid #39cdcc;
+        }
+      }
+    }
+    .three {
+      padding: 15px 2.5%;
+      background: #ffffff;
+      border: 1px solid rgba(33, 63, 125, 0.06);
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+      .edu-item {
+        p {
+          font-family: "Work Sans" sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 11px;
+          line-height: 14px;
+          text-transform: uppercase;
+          color: #545f7d;
+          padding: 5px 0;
+        }
+        h4 {
+          font-family: "Work Sans" sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          /* identical to box height */
+
+          color: #545f7d;
+        }
+      }
+      .personal ,.education,.socials,.guarantor,.last{
+        padding: 10px 0;
+        border-bottom: 1px solid #21407d44;
+        padding-bottom: 15px;
+        .top {
+          padding: 15px 0;
+          h4 {
+            font-family: "Work sans" sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            /* identical to box height */
+
+            color: #213f7d;
+          }
+        }
+        .bottom {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          grid-gap: 15px;
+        }
+      }
+      .education {
+        .bottom {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+      .last,
+      .socials,
+      .guarantor {
+        .bottom {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+      }
+      .last{
+        padding: 25px 0;
+        padding-top: 50px;
+border: 0;
+      }
+    }
+  }
+}
