@@ -35,42 +35,26 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="bottom">
-          <div className="table-heading">
-            <h2>Organization</h2>
-            <h2>Username</h2>
-            <h2>Email</h2>
-            <h2>Phone number</h2>
-            <h2>Date joined</h2>
-            <h2>Status</h2>
-            <h2 style={{ display: "none" }}>dot</h2>
-          </div>
-          <div className="table-body">
-            <p>Lendsqr</p>
-            <p>Adedeji</p>
-            <p>Email</p>
-            <p>Phone number</p>
-            <p>Date joined</p>
-            <p>Status</p>
-            <p>dot</p>
-          </div>
-          <div className="table-body">
-            <p>Lendsqr</p>
-            <p>Adedeji</p>
-            <p>Email</p>
-            <p>Phone number</p>
-            <p>Date joined</p>
-            <p>Status</p>
-            <p>dot</p>
-          </div>{" "}
-          <div className="table-body">
-            <p>Lendsqr</p>
-            <p>Adedeji</p>
-            <p>Email</p>
-            <p>Phone number</p>
-            <p>Date joined</p>
-            <p>Status</p>
-            <p>dot</p>
-          </div>
+          <table>
+            <tr className="table-heading">
+              <th>Organization</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Phone number</th>
+              <th>Date joined</th>
+              <th>Status</th>
+              <th style={{ display: "none" }}>dot</th>
+            </tr>
+            <tr className="table-body">
+              <td>Lendsqr</td>
+              <td>Adedeji</td>
+              <td>Email</td>
+              <td>Phone number</td>
+              <td>Date joined</td>
+              <td>Status</td>
+              <td>dot</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

@@ -55,47 +55,53 @@
       }
     }
     .bottom {
-      .table-heading,
-      .table-body {
-        // display: grid;
-        // grid-template-columns: 1fr 1fr 1.2fr 1fr 1.2fr 1fr 0.1fr;
+      table {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        p,
-        h2 {
-          font-family: "Work Sans" sans-serif;
-
-          font-style: normal;
-          font-weight: 600;
-          font-size: 11px;
-          line-height: 14px;
-          display: flex;
-          text-transform: uppercase;
-          color: #545f7d;
-          width: 100%;
-          justify-content: left;
-          width: max-content;
+        th {
+          text-align: left;
         }
       }
-      .table-body {
-        p {
-          font-weight: 400;
-          text-transform: none;
-          padding: 2.5% 0;
-          font-family: "Work Sans" sans-serif;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 11px;
-          line-height: 14px;
-          /* identical to box height */
+      // .table-heading,
+      // .table-body {
+      //   // display: grid;
+      //   // grid-template-columns: 1fr 1fr 1.2fr 1fr 1.2fr 1fr 0.1fr;
+      //   width: 100%;
+      //   display: flex;
+      //   justify-content: space-between;
 
-          color: #545f7d;
-        }
-        border-bottom: 1px solid rgba(33, 63, 125, 0.1);
-        padding: 2.5% 0;
-      }
+      //   p,
+      //   h2 {
+      //     font-family: "Work Sans" sans-serif;
+
+      //     font-style: normal;
+      //     font-weight: 600;
+      //     font-size: 11px;
+      //     line-height: 14px;
+      //     display: flex;
+      //     text-transform: uppercase;
+      //     color: #545f7d;
+      //     width: 100%;
+      //     justify-content: left;
+      //     width: max-content;
+      //   }
+      // }
+      // .table-body {
+      //   p {
+      //     font-weight: 400;
+      //     text-transform: none;
+      //     padding: 2.5% 0;
+      //     font-family: "Work Sans" sans-serif;
+      //     font-style: normal;
+      //     font-weight: 400;
+      //     font-size: 11px;
+      //     line-height: 14px;
+      //     /* identical to box height */
+
+      //     color: #545f7d;
+      //   }
+      //   border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+      //   padding: 2.5% 0;
+      // }
       // .table-heading,
       // .table-body {
       //   display: flex;
