@@ -1,6 +1,94 @@
 .dashboard {
   width: 100%;
+  display: flex;
   .right {
     width: 80%;
+    padding: 15px 3.5%;
+    background-color: #fbfbfb;
+    box-sizing: border-box;
+    .heading {
+      font-family: "Work Sans" sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: #213f7d;
+    }
+    .top {
+      display: flex;
+      gap: 15px;
+      width: 100%;
+      justify-content: space-between;
+      padding: 15px 0;
+      .card {
+        width: 20%;
+        background: #ffffff;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        padding: 15px 3.5%;
+        img {
+          height: 35%;
+        }
+        p {
+          font-family: "Work Sans" sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 16px;
+          text-transform: uppercase;
+          padding: 5 px 0;
+
+          color: #545f7d;
+        }
+        h4 {
+          font-family: "Work Sans" sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          text-transform: uppercase;
+
+          color: #213f7d;
+        }
+      }
+    }
+    .bottom {
+      // .table-heading,
+      // .table-body {
+      //   display: grid;
+      //   grid-template-columns: 1fr 1fr 1.5fr 1fr 1.5fr 1fr 0.1fr;
+      //   width: 100%;
+      //   p {
+      //     font-family: "Work Sans";
+      //     font-style: normal;
+      //     font-weight: 600;
+      //     font-size: 10px;
+      //     line-height: 14px;
+      //     display: flex;
+      //     text-transform: uppercase;
+      //     color: #545f7d;
+      //     width: 100%;
+      //     justify-content: left;
+      //     width: max-content;
+      //   }
+      // }
+      // .table-body {
+      //   p {
+      //     font-weight: 400;
+      //     text-transform: none;
+      //   }
+      // }
+      .table-heading,
+      .table-body {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        p {
+          width: calc(100% / 7);
+        }
+      }
+    }
   }
 }
