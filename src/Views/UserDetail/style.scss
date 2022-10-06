@@ -4,7 +4,7 @@
   width: 100%;
   .left {
     width: 17.5%;
-    padding: 25px 3.5%;
+    padding: 25px 3%;
     div {
       .top {
         h4 {
@@ -35,7 +35,7 @@
         line-height: 16px;
         /* identical to box height */
         color: #213f7d;
-        padding: 0 10%;
+        padding: 0 7.5%;
       }
     }
   }
@@ -77,9 +77,12 @@
           color: #213f7d;
         }
         .button-wrapper {
-          width: 32.5%;
+          // width: 32.5%;
           display: flex;
           justify-content: space-between;
+          width: max-content;
+          box-sizing: border-box;
+          gap: 10px;
           button {
             border: 1px solid #e4033b;
             border-radius: 8px;
@@ -95,6 +98,7 @@
           .sec {
             color: #39cdcc;
             border: 1px solid #39cdcc;
+            // margin-left: 5%;
           }
         }
       }
@@ -120,7 +124,7 @@
       .top {
         display: flex;
         align-items: center;
-        width: 60%;
+        width: 70%;
         justify-content: space-between;
         padding-bottom: 3.25%;
         box-sizing: border-box;
@@ -139,10 +143,12 @@
 
           color: #213f7d;
         }
+        div {
+          padding: 0 3.5%;
+        }
         .user-tier {
           border-right: 1px solid #545f7d33;
           border-left: 1px solid #545f7d33;
-          padding: 0 5%;
           .stars {
             display: flex;
             img {
