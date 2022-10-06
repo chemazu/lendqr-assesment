@@ -2,6 +2,7 @@
 .user-detail {
   display: flex;
   width: 100%;
+  box-sizing: border-box;
   // .left {
   //   width: 20%;
   //   padding: 25px 3%;
@@ -40,7 +41,7 @@
   //   }
   // }
   .right {
-    width: 80%;
+    // width: 80%;
     background-color: #fbfbfb;
     padding: 15px 5%;
     .one {

@@ -14,6 +14,7 @@ function App() {
       <div className="main">
         <Routes>
           <Route path="/user" element={<UserDetail />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
         {/* <Dashboard /> */}
       </div>
