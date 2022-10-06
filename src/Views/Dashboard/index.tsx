@@ -3,7 +3,6 @@ import "./style.scss";
 import DashboardMenu from "../../Component/DashboardMenu";
 import loanUsers from "../../assests/img/loan-users.svg";
 import hdot from "../../assests/img/h-dots.svg";
-
 import savingUsers from "../../assests/img/saving-users.svg";
 import usersIcon from "../../assests/img/users-icon.svg";
 import activeUsers from "../../assests/img/active-users.svg";
@@ -61,7 +60,7 @@ const TableRow = () => {
     <tr className="table-body">
       <td>Lendsqr</td>
       <td>Adedeji</td>
-      <td>Email</td>
+      <td>Adedeji@Lendsqr.com</td>
       <td>Phone number</td>
       <td>Date joined</td>
       <td>Status</td>
