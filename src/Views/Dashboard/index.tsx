@@ -36,14 +36,32 @@ export default function Dashboard() {
         </div>
         <div className="bottom">
           <div className="table-heading">
-            <p>Organization</p>
-            <p>Username</p>
+            <h2>Organization</h2>
+            <h2>Username</h2>
+            <h2>Email</h2>
+            <h2>Phone number</h2>
+            <h2>Date joined</h2>
+            <h2>Status</h2>
+            <h2 style={{ display: "none" }}>dot</h2>
+          </div>
+          <div className="table-body">
+            <p>Lendsqr</p>
+            <p>Adedeji</p>
             <p>Email</p>
             <p>Phone number</p>
             <p>Date joined</p>
             <p>Status</p>
             <p>dot</p>
           </div>
+          <div className="table-body">
+            <p>Lendsqr</p>
+            <p>Adedeji</p>
+            <p>Email</p>
+            <p>Phone number</p>
+            <p>Date joined</p>
+            <p>Status</p>
+            <p>dot</p>
+          </div>{" "}
           <div className="table-body">
             <p>Lendsqr</p>
             <p>Adedeji</p>
