@@ -2,46 +2,46 @@
 .user-detail {
   display: flex;
   width: 100%;
-  .left {
-    width: 17.5%;
-    padding: 25px 3%;
-    div {
-      .top {
-        h4 {
-          font-family: "Work Sans" sans-serif;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 12px;
-          line-height: 14px;
-          /* identical to box height */
-          text-transform: uppercase;
-          color: #545f7d;
-        }
-      }
-    }
-    .left-item {
-      display: flex;
-      // justify-content: space-between;
-      // width: 90%;
-      padding: 5% 0;
-      margin: 5% 0;
-      h3,
-      h4,
-      p {
-        font-family: "Work Sans" sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16px;
-        /* identical to box height */
-        color: #213f7d;
-        padding: 0 7.5%;
-      }
-    }
-  }
+  // .left {
+  //   width: 20%;
+  //   padding: 25px 3%;
+  //   div {
+  //     .top {
+  //       h4 {
+  //         font-family: "Work Sans" sans-serif;
+  //         font-style: normal;
+  //         font-weight: 500;
+  //         font-size: 12px;
+  //         line-height: 14px;
+  //         /* identical to box height */
+  //         text-transform: uppercase;
+  //         color: #545f7d;
+  //       }
+  //     }
+  //   }
+  //   .left-item {
+  //     display: flex;
+  //     // justify-content: space-between;
+  //     // width: 90%;
+  //     padding: 5% 0;
+  //     margin: 5% 0;
+  //     h3,
+  //     h4,
+  //     p {
+  //       font-family: "Work Sans" sans-serif;
+  //       font-style: normal;
+  //       font-weight: 400;
+  //       font-size: 14px;
+  //       line-height: 16px;
+  //       /* identical to box height */
+  //       color: #213f7d;
+  //       padding: 0 7.5%;
+  //     }
+  //   }
+  // }
   .right {
-    width: 87.5%;
-    background-color: #e5e5e5;
+    width: 80%;
+    background-color: #fbfbfb;
     padding: 15px 5%;
     .one {
       .top {
@@ -94,6 +94,7 @@
             text-transform: uppercase;
             color: #e4033b;
             font-family: "Work Sans", sans-serif;
+            background-color: transparent;
           }
           .sec {
             color: #39cdcc;
@@ -149,6 +150,10 @@
         .user-tier {
           border-right: 1px solid #545f7d33;
           border-left: 1px solid #545f7d33;
+          p {
+            padding-top: 0;
+            padding-bottom: 0;
+          }
           .stars {
             display: flex;
             img {

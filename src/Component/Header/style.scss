@@ -5,7 +5,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: .5em 3.5%;
+  padding: 0.5em 3.5%;
   box-sizing: border-box;
   align-items: center;
   background: #ffffff;
@@ -42,6 +42,10 @@
         border: 0;
         padding: 7.5px;
         color: #545f7db1;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
         &:-ms-input-placeholder {
           /* Internet Explorer 10-11 */
           color: #545f7d;
