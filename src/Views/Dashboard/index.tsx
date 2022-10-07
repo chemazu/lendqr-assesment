@@ -8,6 +8,18 @@ import usersIcon from "../../assests/img/users-icon.svg";
 import activeUsers from "../../assests/img/active-users.svg";
 
 export default function Dashboard() {
+  let [userData, setUserData] = React.useState<any>();
+  React.useEffect(() => {
+    console.log(
+      fetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
+        .then((res) => res.json())
+        .then((result) => {
+          setUserData(result);
+        })
+        .catch((error) => console.log(error))
+    );
+  }, []);
+
   return (
     <div className="dashboard">
       <DashboardMenu />
@@ -46,6 +58,14 @@ export default function Dashboard() {
               <th>Status</th>
               <th style={{ display: "none" }}>dot</th>
             </tr>
+            {userData ? (
+              userData.map((item: any) => {
+                console.log(item)
+                return <TableRow />;
+              })
+            ) : (
+              <>Loading...</>
+            )}
             <TableRow />
             <TableRow />
             <TableRow />
