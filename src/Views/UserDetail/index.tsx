@@ -6,7 +6,7 @@ import emptyStar from "../../assests/img/empty_star.svg";
 
 import avatar from "../../assests/img/avatar.svg";
 
-import DashboardMenu from "../../Component/DashboardMenu";
+import DashboardMenu from "../../components/DashboardMenu";
 
 export default function UserDetail() {
   return (

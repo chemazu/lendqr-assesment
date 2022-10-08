@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.scss";
-import DashboardMenu from "../../Component/DashboardMenu";
+import DashboardMenu from "../../components/DashboardMenu";
 import loanUsers from "../../assests/img/loan-users.svg";
 import hdot from "../../assests/img/h-dots.svg";
 import savingUsers from "../../assests/img/saving-users.svg";
 import usersIcon from "../../assests/img/users-icon.svg";
 import activeUsers from "../../assests/img/active-users.svg";
+import ShowPagination from "../ShowPagination";
 
 export default function Dashboard() {
   let [userData, setUserData] = React.useState<any>();
@@ -60,15 +61,13 @@ export default function Dashboard() {
             </tr>
             {userData ? (
               userData.map((item: any) => {
-                console.log(item)
+                console.log(item);
                 return <TableRow />;
               })
             ) : (
               <>Loading...</>
             )}
-            <TableRow />
-            <TableRow />
-            <TableRow />
+            {userData ? <ShowPagination data={userData} /> : <p>Loading...</p>}
           </table>
         </div>
       </div>

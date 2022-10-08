@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
-import Header from "./Component/Header";
+import Header from "./components/Header";
 import Dashboard from "./Views/Dashboard";
 import UserDetail from "./Views/UserDetail";
 
