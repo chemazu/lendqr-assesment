@@ -25,7 +25,7 @@ export default function Header() {
       </div>
       <div className="user-info">
         <a href="/#">Docs</a>
-        <img src={notify} alt="notify" />
+        <img src={notify} alt="notify"  className="notify"/>
         <div className="user-caret">
           <img src={warren} alt="user" className="user" />
           <p>Waren</p>
