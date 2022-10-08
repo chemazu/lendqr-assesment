@@ -78,6 +78,17 @@ export default function Dashboard() {
               <>Loading...</>
             )}
           </table>
+          {/* <table>
+            <tr className="table-heading">
+              <th>Organization</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Phone number</th>
+              <th>Date joined</th>
+              <th>Status</th>
+              <th style={{ display: "none" }}>dot</th>
+            </tr>
+          </table> */}
           {userData ? (
             <div className="pagination-holder">
               <div className="showing">
@@ -142,7 +153,7 @@ const TableRow = ({ item }: { item: any }) => {
     var strTime = hours + ":" + minutes + " " + ampm;
     return strTime;
   }
-let status =randomStatus()
+  let status = randomStatus();
   return (
     <tr className="table-body">
       <td>{item.orgName}</td>
@@ -153,7 +164,7 @@ let status =randomStatus()
         {month[createdDate.getMonth()]} {createdDate.getDay()},{" "}
         {createdDate.getFullYear()} {formatAMPM()}
       </td>
-      <td >
+      <td>
         <p className={status}>{status}</p>
       </td>
       <td>

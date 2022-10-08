@@ -27,7 +27,7 @@
         border: 1px solid rgba(33, 63, 125, 0.06);
         box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
         border-radius: 4px;
-        padding:15px 2.5%;
+        padding: 15px 2.5%;
         img {
           height: 35%;
         }
@@ -113,6 +113,7 @@
           color: #e4033b;
         }
       }
+
       .pagination-holder {
         display: flex;
         width: 100%;
@@ -147,6 +148,45 @@
         }
         .pagination-display-holder {
           width: 20%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .dashboard {
+    .dash-left {
+      display: none;
+    }
+    .right {
+      width: 100%;
+      .top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10%;
+        .card {
+          width: 100%;
+          padding: 15px;
+          box-sizing: border-box;
+        }
+        margin-bottom: 10%;
+      }
+      .bottom {
+        table {
+          // display: none;
+          td,
+          th {
+            font-size: 4px;
+       
+          }
+        }
+        .pagination-holder {
+          .showing {
+            width: 60%;
+          }
+          .pagination-display-holder {
+            width: 40%;
+          }
         }
       }
     }

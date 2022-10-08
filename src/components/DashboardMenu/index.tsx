@@ -54,7 +54,7 @@ export default function DashboardMenu() {
     { title: "Logout", img: logOutSvg },
   ];
   return (
-    <div className="left">
+    <div className="dash-left">
       <div className="left-item">
         <img src={briefcase} alt="icon" />
 

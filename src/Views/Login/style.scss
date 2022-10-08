@@ -1,0 +1,19 @@
+.login {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  background-color: #fff;
+  .left {
+    .logo {
+      display: flex;
+      h2 {
+        color: #213f7d;
+        font-size: 26px;
+        line-height: 30px;
+        padding-left: 5%;
+      }
+    }
+  }
+}
