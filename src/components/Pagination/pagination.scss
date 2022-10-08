@@ -4,21 +4,23 @@
   .special {
     background: rgba(33, 63, 125, 0.1);
     border-radius: 4px;
+    display: flex;
+    align-items: center;
   }
   .pagination-item {
-    padding: 0 12px;
-    height: 32px;
+    padding: .5em;
+    height: 1em;
     text-align: center;
-    // margin: auto 4px;
-    color: rgba(84, 95, 125, 0.6);
+    // // margin: auto 4px;
+    // color: rgba(84, 95, 125, 0.6);
     display: flex;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     align-items: center;
-    letter-spacing: 0.01071em;
+    // letter-spacing: 0.01071em;
     // border-radius: 16px;
-    line-height: 1.43;
-    font-size: 13px;
-    min-width: 2px;
+    // line-height: 1.43;
+    // font-size: 13px;
+    // min-width: 2px;
 
     &.dots:hover {
       background-color: transparent;

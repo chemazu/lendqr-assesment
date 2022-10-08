@@ -6,19 +6,29 @@ import hdot from "../../assests/img/h-dots.svg";
 import savingUsers from "../../assests/img/saving-users.svg";
 import usersIcon from "../../assests/img/users-icon.svg";
 import activeUsers from "../../assests/img/active-users.svg";
-import ShowPagination from "../ShowPagination";
+import Pagination from "../../components/Pagination";
 
 export default function Dashboard() {
-  let [userData, setUserData] = React.useState<any>();
+  let [userData, setUserData] = React.useState<[]>();
+  const [PageSize, setPageSize] = React.useState<number>(25);
+  const handleChange = (e: any) => {
+    setPageSize(e.target.value);
+  };
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const currentTableData = React.useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize;
+    const lastPageIndex = firstPageIndex + PageSize;
+    if (userData !== undefined) {
+      return userData.slice(firstPageIndex, lastPageIndex);
+    }
+  }, [currentPage, userData, PageSize]);
   React.useEffect(() => {
-    console.log(
-      fetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
-        .then((res) => res.json())
-        .then((result) => {
-          setUserData(result);
-        })
-        .catch((error) => console.log(error))
-    );
+    fetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
+      .then((res) => res.json())
+      .then((result) => {
+        setUserData(result);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
@@ -59,32 +69,95 @@ export default function Dashboard() {
               <th>Status</th>
               <th style={{ display: "none" }}>dot</th>
             </tr>
-            {userData ? (
-              userData.map((item: any) => {
+            {currentTableData ? (
+              currentTableData.map((item: any, index: number) => {
                 console.log(item);
-                return <TableRow />;
+                return <TableRow item={item} key={index} />;
               })
             ) : (
               <>Loading...</>
             )}
-            {userData ? <ShowPagination data={userData} /> : <p>Loading...</p>}
           </table>
+          {userData ? (
+            <div className="pagination-holder">
+              <div className="showing">
+                <p>Showing</p>
+                <select name="pageSize" id="pagesize" onChange={handleChange}>
+                  <option value={25}>25</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                </select>
+                <p>out of {userData.length}</p>
+              </div>
+              <div className="pagination-display-holder">
+                <Pagination
+                  className="pagination-bar"
+                  currentPage={currentPage}
+                  totalCount={userData.length}
+                  pageSize={PageSize}
+                  onPageChange={(page: React.SetStateAction<number>) =>
+                    setCurrentPage(page)
+                  }
+                />
+              </div>
+            </div>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
       </div>
     </div>
   );
 }
-const TableRow = () => {
+const TableRow = ({ item }: { item: any }) => {
+  let month = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  console.log(item.createdAt);
+  let createdDate = new Date(item.createdAt);
+  console.log(month[createdDate.getMonth()]);
+  let randomStatus = () => {
+    let status = ["Inactive", "Pending", "Blacklisted", "Active"];
+    return status[Math.floor(Math.random() * 4)];
+    // return
+  };
+  function formatAMPM() {
+    var hours = createdDate.getHours();
+    var minutes: any = createdDate.getMinutes();
+    var ampm = hours >= 12 ? "pm" : "am";
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+    var strTime = hours + ":" + minutes + " " + ampm;
+    return strTime;
+  }
+let status =randomStatus()
   return (
     <tr className="table-body">
-      <td>Lendsqr</td>
-      <td>Adedeji</td>
-      <td>Adedeji@Lendsqr.com</td>
-      <td>Phone number</td>
-      <td>Date joined</td>
-      <td>Status</td>
+      <td>{item.orgName}</td>
+      <td>{item.userName}</td>
+      <td>{item.email}</td>
+      <td>{item.phoneNumber}</td>
       <td>
-        <img src={hdot} />
+        {month[createdDate.getMonth()]} {createdDate.getDay()},{" "}
+        {createdDate.getFullYear()} {formatAMPM()}
+      </td>
+      <td >
+        <p className={status}>{status}</p>
+      </td>
+      <td>
+        <img src={hdot} alt="options" />
       </td>
     </tr>
   );
