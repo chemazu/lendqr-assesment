@@ -14,4 +14,18 @@
     margin: 0;
     padding: 0;
   }
+  .mobile {
+    display: none;
+    // width: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .App {
+    .desktop {
+      display: none;
+    }
+    .mobile{
+      display: table-cell;
+    }
+  }
 }

@@ -6,6 +6,8 @@ import hdot from "../../assests/img/h-dots.svg";
 import savingUsers from "../../assests/img/saving-users.svg";
 import usersIcon from "../../assests/img/users-icon.svg";
 import activeUsers from "../../assests/img/active-users.svg";
+import filterImg from "../../assests/img/filter-img.svg";
+
 import Pagination from "../../components/Pagination";
 
 export default function Dashboard() {
@@ -61,13 +63,34 @@ export default function Dashboard() {
         <div className="bottom">
           <table>
             <tr className="table-heading">
-              <th>Organization</th>
-              <th>Username</th>
-              <th>Email</th>
-              <th>Phone number</th>
-              <th>Date joined</th>
-              <th>Status</th>
-              <th style={{ display: "none" }}>dot</th>
+              <th className="theading">
+                <p>Organization</p>
+                <img src={filterImg} alt="filter" />
+              </th>
+              <th className="theading">
+                Username <img src={filterImg} alt="filter" />
+              </th>
+              <th className="theading">
+                Email <img src={filterImg} alt="filter" />
+              </th>
+              <th className="theading mobile">
+                Phone <img src={filterImg} alt="filter" />
+              </th>
+              <th className="theading desktop">
+                Phone number <img src={filterImg} alt="filter" />
+              </th>
+              <th className="theading mobile">
+                Joined <img src={filterImg} alt="filter" />
+              </th>
+              <th className="theading desktop">
+                Date Joined <img src={filterImg} alt="filter" />
+              </th>
+              <th className="theading">
+                Status <img src={filterImg} alt="filter" />
+              </th>
+              <th style={{ display: "none" }}>
+                dot <img src={filterImg} alt="filter" />
+              </th>
             </tr>
             {currentTableData ? (
               currentTableData.map((item: any, index: number) => {
