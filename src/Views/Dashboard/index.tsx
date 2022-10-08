@@ -44,18 +44,18 @@ export default function Dashboard() {
           </div>
           <div className="card">
             <img alt="card-icon" src={activeUsers} />
-            <p>Users</p>
+            <p>Active Users</p>
             <h4>2,453</h4>
           </div>
           <div className="card">
             <img alt="card-icon" src={loanUsers} />
-            <p>Users</p>
-            <h4>2,453</h4>
+            <p>Users with loans</p>
+            <h4>12,453</h4>
           </div>
           <div className="card">
             <img alt="card-icon" src={savingUsers} />
-            <p>Users</p>
-            <h4>2,453</h4>
+            <p>Users with savings</p>
+            <h4>102,453</h4>
           </div>
         </div>
         <div className="bottom">

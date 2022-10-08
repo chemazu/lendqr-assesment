@@ -1,5 +1,8 @@
 import React from "react";
 import classnames from "classnames";
+import arrowRight from "../../assests/img/arrow-right.svg"
+import arrowLeft from "../../assests/img/arrow-left.svg"
+
 import { usePagination, DOTS } from "../../hooks/usePagination";
 import "./pagination.scss";
 const Pagination = (props: {
@@ -49,7 +52,8 @@ const Pagination = (props: {
         })}
         onClick={onPrevious}
       >
-        <div className="arrow left" />
+               <img src={arrowLeft} alt="arrow left" className="arrowLeft"/>
+
       </li>
       {paginationRange.map((pageNumber, index) => {
         if (pageNumber === DOTS) {
@@ -78,7 +82,8 @@ const Pagination = (props: {
         })}
         onClick={onNext}
       >
-        <div className="arrow right" />
+        <img src={arrowRight} alt="arrow right" />
+        {/* <div className="arrow right" /> */}
       </li>
     </ul>
   );
