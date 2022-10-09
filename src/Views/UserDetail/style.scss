@@ -51,7 +51,7 @@
         justify-content: space-between;
         min-width: fit-content;
         width: 12.5%;
-        p {
+        p,a {
           font-family: "Work Sans", sans-serif;
           font-style: normal;
           font-weight: 400;
@@ -59,6 +59,8 @@
           line-height: 19px;
           color: #545f7d;
           padding-left: 10px;
+          text-decoration: none;
+          display: flex;
         }
       }
       .bottom {
@@ -131,7 +133,10 @@
         padding-bottom: 3.25%;
         box-sizing: border-box;
         img {
-          width: 6rem;
+          width: 4rem;
+          padding: 25px;
+          background-color: #21407d55;
+          border-radius: 50%;
         }
         p {
           padding: 0.5em 0;
@@ -146,7 +151,7 @@
           color: #213f7d;
         }
         div {
-          padding: 0 3.5%;
+          padding: 0 2%;
         }
         .user-tier {
           border-right: 1px solid #545f7d33;
@@ -159,6 +164,9 @@
             display: flex;
             img {
               width: 20%;
+            background-color: transparent;
+            padding: 5px;
+
             }
           }
         }

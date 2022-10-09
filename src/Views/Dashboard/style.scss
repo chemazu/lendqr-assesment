@@ -63,7 +63,12 @@
       table {
         width: 100%;
         position: relative;
-
+        .table-body{
+          a{
+            text-decoration: none;
+            color:inherit
+          }
+        }
         th,
         td {
           text-align: left;

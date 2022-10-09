@@ -9,8 +9,7 @@ import activeUsers from "../../assests/img/active-users.svg";
 import filterImg from "../../assests/img/filter-img.svg";
 import Pagination from "../../components/Pagination";
 import resultFilter from "../../utils/resultFilter";
-import { object } from "prop-types";
-
+import { Link } from "react-router-dom";
 export default function Dashboard() {
   let [userData, setUserData] = React.useState<any[]>();
   let [orgName, setOrgName] = React.useState<string>("");
@@ -21,6 +20,7 @@ export default function Dashboard() {
   let [userStatus, setUserStatus] = React.useState<string>();
   const [PageSize, setPageSize] = React.useState<number>(25);
   const [userName, setUserName] = React.useState<string>("");
+
   const [currentPage, setCurrentPage] = React.useState(1);
   let [showFilter, setShowFilter] = React.useState(true);
   const currentTableData = React.useMemo(() => {
@@ -55,6 +55,12 @@ export default function Dashboard() {
       phoneNumber: phone,
     });
     setShowFilter(!showFilter);
+  };
+  let resetFilter = (e: any) => {
+    e.preventDefault();
+    setFilterObject({});
+    setShowFilter(!showFilter);
+
   };
   return (
     <div className="dashboard">
@@ -260,7 +266,13 @@ export default function Dashboard() {
                       </select>
                     </div>
                     <div className="button-wrapper">
-                      <button>Reset</button>
+                      <button
+                        onClick={(e) => {
+                          resetFilter(e);
+                        }}
+                      >
+                        Reset
+                      </button>
                       <button
                         onClick={(e) => {
                           filterAction(e);
@@ -299,7 +311,7 @@ export default function Dashboard() {
                 <Pagination
                   className="pagination-bar"
                   currentPage={currentPage}
-                  totalCount={userData.length}
+                  totalCount={userData.filter(resultFilter(filterObject)).length}
                   pageSize={PageSize}
                   onPageChange={(page: React.SetStateAction<number>) =>
                     setCurrentPage(page)
@@ -351,19 +363,33 @@ const TableRow = ({ item }: { item: any }) => {
   let status = randomStatus();
   return (
     <tr className="table-body">
-      <td>{item.orgName}</td>
-      <td>{item.userName}</td>
-      <td>{item.email}</td>
-      <td>{item.phoneNumber}</td>
       <td>
-        {month[createdDate.getMonth()]} {createdDate.getDay()},{" "}
-        {createdDate.getFullYear()} {formatAMPM()}
+        <Link to={`/user/${item.id}`}>{item.orgName}</Link>
       </td>
       <td>
-        <p className={status}>{status}</p>
+        <Link to={`/user/${item.id}`}>{item.userName}</Link>
       </td>
       <td>
-        <img src={hdot} alt="options" />
+        <Link to={`/user/${item.id}`}>{item.email}</Link>
+      </td>
+      <td>
+        <Link to={`/user/${item.id}`}>{item.phoneNumber}</Link>
+      </td>
+      <td>
+        <Link to={`/user/${item.id}`}>
+          {month[createdDate.getMonth()]} {createdDate.getDay()},{" "}
+          {createdDate.getFullYear()} {formatAMPM()}
+        </Link>
+      </td>
+      <td>
+        <Link to={`/user/${item.id}`}>
+          <p className={status}>{status}</p>
+        </Link>
+      </td>
+      <td>
+        <Link to={`/user/${item.id}`}>
+          <img src={hdot} alt="options" />
+        </Link>
       </td>
     </tr>
   );

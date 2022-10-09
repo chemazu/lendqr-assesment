@@ -1,14 +1,19 @@
 import React from "react";
 import logo from "../../assests/img/Lendsqr-Logo.png";
 import pablo from "../../assests/img/pablo.svg";
-
+import { useNavigate } from "react-router-dom";
 import "./style.scss";
 
 export default function Login() {
   let [email, setEmail] = React.useState("");
   let [password, setPassword] = React.useState("");
   let [showPassword, setShowPassword] = React.useState(false);
-
+  let navigate = useNavigate();
+  let handleLogin = (e: any) => {
+    e.preventDefault();
+    localStorage.setItem("token", "apiToken");
+    navigate("/dashboard");
+  };
   return (
     <div className="login">
       <div className="left">
@@ -52,7 +57,7 @@ export default function Login() {
           </div>
           <p>FORGOT PASSWORD?</p>
           <div className="button-wrapper">
-            <button>LOG IN</button>
+            <button onClick={(e) => handleLogin(e)}>LOG IN</button>
           </div>
         </form>
       </div>
