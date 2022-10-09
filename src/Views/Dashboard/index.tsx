@@ -92,26 +92,48 @@ export default function Dashboard() {
                 dot <img src={filterImg} alt="filter" />
               </th>
             </tr>
+            <tr>
+              <div className="filter">
+                <form>
+                  <div className="input-wrapper">
+                    <p>Organization</p>
+                    <select></select>
+                  </div>
+                  <div className="input-wrapper">
+                    <p>Username</p>
+                    <input />
+                  </div>
+                  <div className="input-wrapper">
+                    <p>Email</p>
+                    <input />
+                  </div>{" "}
+                  <div className="input-wrapper">
+                    <p>Date</p>
+                    <input />
+                  </div>{" "}
+                  <div className="input-wrapper">
+                    <p>Phone Number</p>
+                    <input />
+                  </div>
+                  <div className="input-wrapper">
+                    <p>Status</p>
+                    <select></select>
+                  </div>
+                  <div className="button-wrapper">
+                    <button>Reset</button>
+                    <button>Filter</button>
+                  </div>
+                </form>
+              </div>
+            </tr>
             {currentTableData ? (
               currentTableData.map((item: any, index: number) => {
-                console.log(item);
                 return <TableRow item={item} key={index} />;
               })
             ) : (
               <>Loading...</>
             )}
           </table>
-          {/* <table>
-            <tr className="table-heading">
-              <th>Organization</th>
-              <th>Username</th>
-              <th>Email</th>
-              <th>Phone number</th>
-              <th>Date joined</th>
-              <th>Status</th>
-              <th style={{ display: "none" }}>dot</th>
-            </tr>
-          </table> */}
           {userData ? (
             <div className="pagination-holder">
               <div className="showing">
@@ -158,9 +180,7 @@ const TableRow = ({ item }: { item: any }) => {
     "Nov",
     "Dec",
   ];
-  console.log(item.createdAt);
   let createdDate = new Date(item.createdAt);
-  console.log(month[createdDate.getMonth()]);
   let randomStatus = () => {
     let status = ["Inactive", "Pending", "Blacklisted", "Active"];
     return status[Math.floor(Math.random() * 4)];
