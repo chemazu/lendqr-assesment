@@ -13,10 +13,9 @@ import Pagination from "../../components/Pagination";
 export default function Dashboard() {
   let [userData, setUserData] = React.useState<[]>();
   const [PageSize, setPageSize] = React.useState<number>(25);
-  const handleChange = (e: any) => {
-    setPageSize(e.target.value);
-  };
+
   const [currentPage, setCurrentPage] = React.useState(1);
+  let [showFilter,setShowFilter] = React.useState(true)
   const currentTableData = React.useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
@@ -24,6 +23,9 @@ export default function Dashboard() {
       return userData.slice(firstPageIndex, lastPageIndex);
     }
   }, [currentPage, userData, PageSize]);
+  const handleChange = (e: any) => {
+    setPageSize(e.target.value);
+  };
   React.useEffect(() => {
     fetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
       .then((res) => res.json())
@@ -65,67 +67,69 @@ export default function Dashboard() {
             <tr className="table-heading">
               <th className="theading">
                 <p>Organization</p>
-                <img src={filterImg} alt="filter" />
+                <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
               <th className="theading">
-                Username <img src={filterImg} alt="filter" />
+                Username <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
               <th className="theading">
-                Email <img src={filterImg} alt="filter" />
+                Email <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
               <th className="theading mobile">
-                Phone <img src={filterImg} alt="filter" />
+                Phone <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
               <th className="theading desktop">
-                Phone number <img src={filterImg} alt="filter" />
+                Phone number <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
               <th className="theading mobile">
-                Joined <img src={filterImg} alt="filter" />
+                Joined <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
               <th className="theading desktop">
-                Date Joined <img src={filterImg} alt="filter" />
+                Date Joined <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
               <th className="theading">
-                Status <img src={filterImg} alt="filter" />
+                Status <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
               <th style={{ display: "none" }}>
-                dot <img src={filterImg} alt="filter" />
+                dot <img src={filterImg} alt="filter" onClick={()=>{setShowFilter(!showFilter)}}/>
               </th>
             </tr>
-            <tr>
-              <div className="filter">
-                <form>
-                  <div className="input-wrapper">
-                    <p>Organization</p>
-                    <select></select>
-                  </div>
-                  <div className="input-wrapper">
-                    <p>Username</p>
-                    <input />
-                  </div>
-                  <div className="input-wrapper">
-                    <p>Email</p>
-                    <input />
-                  </div>{" "}
-                  <div className="input-wrapper">
-                    <p>Date</p>
-                    <input />
-                  </div>{" "}
-                  <div className="input-wrapper">
-                    <p>Phone Number</p>
-                    <input />
-                  </div>
-                  <div className="input-wrapper">
-                    <p>Status</p>
-                    <select></select>
-                  </div>
-                  <div className="button-wrapper">
-                    <button>Reset</button>
-                    <button>Filter</button>
-                  </div>
-                </form>
-              </div>
-            </tr>
+            {showFilter && (
+              <tr>
+                <div className="filter">
+                  <form>
+                    <div className="input-wrapper">
+                      <p>Organization</p>
+                      <select></select>
+                    </div>
+                    <div className="input-wrapper">
+                      <p>Username</p>
+                      <input />
+                    </div>
+                    <div className="input-wrapper">
+                      <p>Email</p>
+                      <input />
+                    </div>{" "}
+                    <div className="input-wrapper">
+                      <p>Date</p>
+                      <input />
+                    </div>{" "}
+                    <div className="input-wrapper">
+                      <p>Phone Number</p>
+                      <input />
+                    </div>
+                    <div className="input-wrapper">
+                      <p>Status</p>
+                      <select></select>
+                    </div>
+                    <div className="button-wrapper">
+                      <button>Reset</button>
+                      <button>Filter</button>
+                    </div>
+                  </form>
+                </div>
+              </tr>
+            )}
             {currentTableData ? (
               currentTableData.map((item: any, index: number) => {
                 return <TableRow item={item} key={index} />;
@@ -165,6 +169,7 @@ export default function Dashboard() {
     </div>
   );
 }
+
 const TableRow = ({ item }: { item: any }) => {
   let month = [
     "Jan",
