@@ -23,6 +23,7 @@ import set1 from "../../assests/img/set-1.svg";
 import set2 from "../../assests/img/set-2.svg";
 import set3 from "../../assests/img/set-3.svg";
 import set4 from "../../assests/img/customer-4.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function DashboardMenu() {
   let customers = [
@@ -51,8 +52,13 @@ export default function DashboardMenu() {
     { title: "Fees and Pricing", img: set2 },
     { title: "Audit Logs", img: set3 },
     { title: "Systems Messages", img: set4 },
-    { title: "Logout", img: logOutSvg },
+    // { title: "Logout", img: logOutSvg },
   ];
+  let navigate = useNavigate();
+  let handleLogOut = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
   return (
     <div className="dash-left">
       <div className="left-item">
@@ -108,6 +114,15 @@ export default function DashboardMenu() {
               </div>
             );
           })}
+          <div
+            className="left-item"
+            onClick={() => {
+              handleLogOut();
+            }}
+          >
+            <img src={logOutSvg} alt="users" />
+            <p>Logout</p>
+          </div>
         </div>
       </div>
     </div>

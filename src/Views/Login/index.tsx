@@ -11,7 +11,7 @@ export default function Login() {
   let navigate = useNavigate();
   let handleLogin = (e: any) => {
     e.preventDefault();
-    localStorage.setItem("token", "apiToken");
+    localStorage.setItem("token", "true");
     navigate("/dashboard");
   };
   return (
