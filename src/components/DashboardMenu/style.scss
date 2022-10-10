@@ -45,9 +45,11 @@
     }
   }
 }
-.dash-left {
-  width: 50%;
-  z-index: 50;
-  position: absolute;
-  height: 100%;
+@media screen and (max-width: 480px) {
+  .dash-left {
+    width: 50%;
+    z-index: 50;
+    position: absolute;
+    height: 100%;
+  }
 }
