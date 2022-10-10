@@ -5,8 +5,6 @@ import filledStar from "../../assests/img/filled_star.svg";
 import emptyStar from "../../assests/img/empty_star.svg";
 import {Link} from "react-router-dom"
 
-import avatar from "../../assests/img/avatar.svg";
-
 import DashboardMenu from "../../components/DashboardMenu";
 import { useParams } from "react-router";
 

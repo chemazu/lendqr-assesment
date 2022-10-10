@@ -28,7 +28,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { AuthContextType } from "../../types/types.d";
 
 export default function DashboardMenu() {
-  const { showLeftMenu, setShowLeftMenu } = React.useContext(
+  const { showLeftMenu } = React.useContext(
     AuthContext
   ) as AuthContextType;
 
