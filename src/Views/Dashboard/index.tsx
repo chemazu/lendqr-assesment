@@ -42,9 +42,7 @@ export default function Dashboard() {
       .catch((error) => console.log(error));
   }, []);
 
-  if (userData) {
-    console.log(userData.filter(resultFilter(filterObject)));
-  }
+ 
   let filterAction = (e: any) => {
     e.preventDefault();
     setFilterObject({

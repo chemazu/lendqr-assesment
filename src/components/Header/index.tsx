@@ -5,10 +5,15 @@ import magnify from "../../assests/img/magnify.svg";
 import notify from "../../assests/img/notify.png";
 import warren from "../../assests/img/warren.jpeg";
 import caretDown from "../../assests/img/caret-down.svg";
-
+import { AuthContext } from "../../context/AuthContext";
+import { AuthContextType } from "../../types/types.d";
 import "./style.scss";
 
 export default function Header() {
+  const { showLeftMenu, setShowLeftMenu } = React.useContext(
+    AuthContext
+  ) as AuthContextType;
+
   return (
     <div className="header">
       <div className="logo">
@@ -25,11 +30,17 @@ export default function Header() {
       </div>
       <div className="user-info">
         <a href="/#">Docs</a>
-        <img src={notify} alt="notify"  className="notify"/>
+        <img src={notify} alt="notify" className="notify" />
         <div className="user-caret">
           <img src={warren} alt="user" className="user" />
           <p>Waren</p>
-          <img src={caretDown} alt="caretdown" />
+          <img
+            src={caretDown}
+            alt="caretdown"
+            onClick={() => {
+              setShowLeftMenu(!showLeftMenu);
+            }}
+          />
         </div>
       </div>
     </div>

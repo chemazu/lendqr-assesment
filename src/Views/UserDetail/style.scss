@@ -52,7 +52,8 @@
         justify-content: space-between;
         min-width: fit-content;
         width: 12.5%;
-        p,a {
+        p,
+        a {
           font-family: "Work Sans", sans-serif;
           font-style: normal;
           font-weight: 400;
@@ -165,9 +166,8 @@
             display: flex;
             img {
               width: 20%;
-            background-color: transparent;
-            padding: 5px;
-
+              background-color: transparent;
+              padding: 5px;
             }
           }
         }
@@ -263,9 +263,11 @@
 }
 @media screen and (max-width: 768px) {
   .user-detail {
-    .dash-left {
+    .show-me {
       display: none;
     }
+    position: relative;
+    height: 100%;
     .right {
       width: 100%;
       .one {

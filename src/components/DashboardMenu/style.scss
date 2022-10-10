@@ -38,5 +38,16 @@
       color: #213f7d;
       padding: 0 7.5%;
     }
+    a {
+      display: flex;
+      text-decoration: none;
+      width: 100%;
+    }
   }
+}
+.dash-left {
+  width: 50%;
+  z-index: 50;
+  position: absolute;
+  height: 100%;
 }

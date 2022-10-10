@@ -23,9 +23,15 @@ import set1 from "../../assests/img/set-1.svg";
 import set2 from "../../assests/img/set-2.svg";
 import set3 from "../../assests/img/set-3.svg";
 import set4 from "../../assests/img/customer-4.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { AuthContextType } from "../../types/types.d";
 
 export default function DashboardMenu() {
+  const { showLeftMenu, setShowLeftMenu } = React.useContext(
+    AuthContext
+  ) as AuthContextType;
+
   let customers = [
     { title: "Users", img: users },
     { title: "Guarantors", img: customer2 },
@@ -60,7 +66,7 @@ export default function DashboardMenu() {
     navigate("/");
   };
   return (
-    <div className="dash-left">
+    <div className={`dash-left ${showLeftMenu ? "" : "show-me"}`}>
       <div className="left-item">
         <img src={briefcase} alt="icon" />
 
@@ -68,8 +74,10 @@ export default function DashboardMenu() {
         <img src={arrowDown} alt="icon" />
       </div>
       <div className="left-item">
-        <img src={dash} alt="icon" />
-        <h4>Dashboard</h4>
+        <Link to="/dashboard">
+          <img src={dash} alt="icon" />
+          <h4>Dashboard</h4>
+        </Link>
       </div>
       <div className="customers">
         <div className="top">

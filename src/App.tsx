@@ -6,16 +6,13 @@ import Dashboard from "./Views/Dashboard";
 import UserDetail from "./Views/UserDetail";
 import Login from "./Views/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AuthProvider from "../src/context/AuthContext";
 
 function App() {
-  const [auth, setAuth] = React.useState(false);
-  React.useEffect(() => {
-    if (localStorage.getItem("token") !== null) {
-      setAuth(true);
-    }
-  }, []);
+ const [mobileNav, setMobileNav]= useState(false)
   return (
     <div className="App">
+           <AuthProvider>
       <div className="nav">
         <Header />
       </div>
@@ -26,7 +23,7 @@ function App() {
             element={
               <ProtectedRoute
                 children={<UserDetail />}
-                auth={localStorage.getItem("token") !== null}
+        
               />
             }
           />
@@ -35,11 +32,12 @@ function App() {
            */}
           <Route
             path="/dashboard"
-            element={<ProtectedRoute children={<Dashboard />} auth={auth} />}
+            element={<ProtectedRoute children={<Dashboard />}  />}
           />
         </Routes>
         {/* <Dashboard /> */}
       </div>
+      </AuthProvider>
     </div>
   );
 }
