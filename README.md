@@ -7,11 +7,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 https://chemazu-lendsqr-fe-test.netlify.com/
 
 ## Pages
-/ : Login/Homepage
+/  Login or Homepage
 
-/dashboard : Dashboard page
+![Screen Shot 2022-10-12 at 11 25 56 PM](https://user-images.githubusercontent.com/39961126/195460491-72f96f6f-bbc2-42fc-b549-c6fa91eec1f1.png)
 
-/user/:id  : User detail page
+
+/dashboard  Dashboard page
+
+![Screen Shot 2022-10-12 at 11 25 33 PM](https://user-images.githubusercontent.com/39961126/195460695-3917430b-fde8-4cc7-b9de-d9c907a33858.png)
+
+
+/user/:id   User detail page
+
+![Screen Shot 2022-10-12 at 11 25 21 PM](https://user-images.githubusercontent.com/39961126/195460820-ed89746e-f537-4460-a1c1-4d43719644b1.png)
+
 
 ## ☕️ 🐍 ⚛️
 React (Typescript)
