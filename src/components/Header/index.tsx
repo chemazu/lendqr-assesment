@@ -32,7 +32,9 @@ export default function Header() {
         <a href="/#">Docs</a>
         <img src={notify} alt="notify" className="notify" />
         <div className="user-caret">
-          <img src={warren} alt="user" className="user" />
+          <img src={warren} alt="user" className="user"    onClick={() => {
+              setShowLeftMenu(!showLeftMenu);
+            }}/>
           <p>Waren</p>
           <img
             src={caretDown}
