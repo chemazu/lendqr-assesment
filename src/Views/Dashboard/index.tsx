@@ -42,7 +42,6 @@ export default function Dashboard() {
       .catch((error) => console.log(error));
   }, []);
 
- 
   let filterAction = (e: any) => {
     e.preventDefault();
     setFilterObject({
@@ -58,7 +57,6 @@ export default function Dashboard() {
     e.preventDefault();
     setFilterObject({});
     setShowFilter(!showFilter);
-
   };
   return (
     <div className="dashboard">
@@ -89,200 +87,203 @@ export default function Dashboard() {
         </div>
         <div className="bottom">
           <table>
-            <tr className="table-heading">
-              <th className="theading">
-                <p>Organization</p>
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-              <th className="theading">
-                Username{" "}
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-              <th className="theading">
-                Email{" "}
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-              <th className="theading mobile">
-                Phone{" "}
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-              <th className="theading desktop">
-                Phone number{" "}
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-              <th className="theading mobile">
-                Joined{" "}
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-              <th className="theading desktop">
-                Date Joined{" "}
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-              <th className="theading">
-                Status{" "}
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-              <th style={{ display: "none" }}>
-                dot{" "}
-                <img
-                  src={filterImg}
-                  alt="filter"
-                  onClick={() => {
-                    setShowFilter(!showFilter);
-                  }}
-                />
-              </th>
-            </tr>
-
-            <tr>
-              {!showFilter && (
-                <div className="filter">
-                  <form>
-                    <div className="input-wrapper">
-                      <p>Organization</p>
-                      {userData ? (
+            <thead>
+              <tr className="table-heading">
+                <th className="theading">
+                  <p>Organization</p>
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+                <th className="theading">
+                  Username{" "}
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+                <th className="theading">
+                  Email{" "}
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+                <th className="theading mobile">
+                  Phone{" "}
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+                <th className="theading desktop">
+                  Phone number{" "}
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+                <th className="theading mobile">
+                  Joined{" "}
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+                <th className="theading desktop">
+                  Date Joined{" "}
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+                <th className="theading">
+                  Status{" "}
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+                <th style={{ display: "none" }}>
+                  dot{" "}
+                  <img
+                    src={filterImg}
+                    alt="filter"
+                    onClick={() => {
+                      setShowFilter(!showFilter);
+                    }}
+                  />
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {!showFilter && (
+                  <div className="filter">
+                    <form>
+                      <div className="input-wrapper">
+                        <p>Organization</p>
+                        {userData ? (
+                          <select
+                            onChange={(e) => {
+                              setOrgName(e.target.value);
+                            }}
+                          >
+                            <option selected={true} disabled={true}>
+                              Choose Organization
+                            </option>
+                            {userData.map((item) => {
+                              return (
+                                <option value={item.orgName}>
+                                  {item.orgName}
+                                </option>
+                              );
+                            })}
+                          </select>
+                        ) : (
+                          <p>One</p>
+                        )}
+                      </div>
+                      <div className="input-wrapper">
+                        <p>Username</p>
+                        <input
+                          type="text"
+                          value={userName}
+                          onChange={(e) => {
+                            setUserName(e.target.value);
+                          }}
+                        />
+                      </div>
+                      <div className="input-wrapper">
+                        <p>Email</p>
+                        <input
+                          type="email"
+                          value={email}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                          }}
+                        />
+                      </div>{" "}
+                      <div className="input-wrapper">
+                        <p>Date</p>
+                        <input
+                          type="date"
+                          value={date}
+                          onChange={(e) => {
+                            setDate(e.target.value);
+                          }}
+                        />
+                      </div>{" "}
+                      <div className="input-wrapper">
+                        <p>Phone Number</p>
+                        <input
+                          type="text"
+                          value={phone}
+                          onChange={(e) => {
+                            setPhone(e.target.value);
+                          }}
+                        />
+                      </div>
+                      <div className="input-wrapper">
+                        <p>Status</p>
                         <select
                           onChange={(e) => {
-                            setOrgName(e.target.value);
+                            setUserStatus(e.target.value);
+                          }}
+                          value={userStatus}
+                        >
+                          <option value={0}>Inactive</option>{" "}
+                          <option value={1}>Pending</option>{" "}
+                          <option value={2}>Blacklisted</option>{" "}
+                          <option value={3}>Active</option>
+                        </select>
+                      </div>
+                      <div className="button-wrapper">
+                        <button
+                          onClick={(e) => {
+                            resetFilter(e);
                           }}
                         >
-                          <option selected={true} disabled={true}>
-                            Choose Organization
-                          </option>
-                          {userData.map((item) => {
-                            return (
-                              <option value={item.orgName}>
-                                {item.orgName}
-                              </option>
-                            );
-                          })}
-                        </select>
-                      ) : (
-                        <p>One</p>
-                      )}
-                    </div>
-                    <div className="input-wrapper">
-                      <p>Username</p>
-                      <input
-                        type="text"
-                        value={userName}
-                        onChange={(e) => {
-                          setUserName(e.target.value);
-                        }}
-                      />
-                    </div>
-                    <div className="input-wrapper">
-                      <p>Email</p>
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => {
-                          setEmail(e.target.value);
-                        }}
-                      />
-                    </div>{" "}
-                    <div className="input-wrapper">
-                      <p>Date</p>
-                      <input
-                        type="date"
-                        value={date}
-                        onChange={(e) => {
-                          setDate(e.target.value);
-                        }}
-                      />
-                    </div>{" "}
-                    <div className="input-wrapper">
-                      <p>Phone Number</p>
-                      <input
-                        type="text"
-                        value={phone}
-                        onChange={(e) => {
-                          setPhone(e.target.value);
-                        }}
-                      />
-                    </div>
-                    <div className="input-wrapper">
-                      <p>Status</p>
-                      <select
-                        onChange={(e) => {
-                          setUserStatus(e.target.value);
-                        }}
-                        value={userStatus}
-                      >
-                        <option value={0}>Inactive</option>{" "}
-                        <option value={1}>Pending</option>{" "}
-                        <option value={2}>Blacklisted</option>{" "}
-                        <option value={3}>Active</option>
-                      </select>
-                    </div>
-                    <div className="button-wrapper">
-                      <button
-                        onClick={(e) => {
-                          resetFilter(e);
-                        }}
-                      >
-                        Reset
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          filterAction(e);
-                        }}
-                      >
-                        Filter
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              )}
-            </tr>
+                          Reset
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            filterAction(e);
+                          }}
+                        >
+                          Filter
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                )}
+              </tr>
+            </tbody>
 
             {currentTableData ? (
               currentTableData
@@ -291,7 +292,7 @@ export default function Dashboard() {
                   return <TableRow item={item} key={index} />;
                 })
             ) : (
-              <>Loading...</>
+              <p>Loading...</p>
             )}
           </table>
           {userData ? (
@@ -309,7 +310,9 @@ export default function Dashboard() {
                 <Pagination
                   className="pagination-bar"
                   currentPage={currentPage}
-                  totalCount={userData.filter(resultFilter(filterObject)).length}
+                  totalCount={
+                    userData.filter(resultFilter(filterObject)).length
+                  }
                   pageSize={PageSize}
                   onPageChange={(page: React.SetStateAction<number>) =>
                     setCurrentPage(page)

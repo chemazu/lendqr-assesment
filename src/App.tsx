@@ -28,6 +28,7 @@ function App() {
               path="/dashboard"
               element={<ProtectedRoute children={<Dashboard />} />}
             />
+            <Route path="*" element={<p>There's nothing here: 404!</p>} />
           </Routes>
           {/* <Dashboard /> */}
         </div>
