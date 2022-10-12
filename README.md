@@ -17,9 +17,16 @@ https://chemazu-lendsqr-fe-test.netlify.com/
 ![Screen Shot 2022-10-12 at 11 25 33 PM](https://user-images.githubusercontent.com/39961126/195460695-3917430b-fde8-4cc7-b9de-d9c907a33858.png)
 
 
+
 /user/:id   User detail page
 
 ![Screen Shot 2022-10-12 at 11 25 21 PM](https://user-images.githubusercontent.com/39961126/195460820-ed89746e-f537-4460-a1c1-4d43719644b1.png)
+
+
+mobile menu active
+
+![IMG_6230](https://user-images.githubusercontent.com/39961126/195463516-2a68a27f-9204-4b21-8cea-416573e54fff.PNG)
+
 
 
 ## ☕️ 🐍 ⚛️
