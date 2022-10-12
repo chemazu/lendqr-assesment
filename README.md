@@ -1,8 +1,26 @@
-# Getting Started with Create React App
+# Lendsqr Assessment
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+##  Link
+
+https://chemazu-lendsqr-fe-test.netlify.com/
+
+## Pages
+/ : Login/Homepage
+
+/dashboard : Dashboard page
+
+/user/:id  : User detail page
+
+## ☕️ 🐍 ⚛️
+React (Typescript)
+sass
+
+
+## Setup
+download or clone the repository
+run npm install
 
 In the project directory, you can run:
 
