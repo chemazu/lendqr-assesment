@@ -1,9 +1,15 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { MemoryRouter } from "react-router-dom";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import Login from "../src/Views/Login";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+test("Login", () => {
+  render(
+    <MemoryRouter>
+      <Login />
+    </MemoryRouter>
+  );
+  const linkElement = screen.getByText(/login/i);
   expect(linkElement).toBeInTheDocument();
 });
